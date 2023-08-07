@@ -449,6 +449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 206893681941431088, guid: e01a111166edaca4081ad60b67d579b3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 139b11d195c12f64c840c1855a05ec17, type: 2}
     - target: {fileID: 206893681941431090, guid: e01a111166edaca4081ad60b67d579b3, type: 3}
       propertyPath: m_Name
       value: White Ball
@@ -510,6 +514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6324774730162803230, guid: 7eac538a54354eb45a1c844c1b6ed784, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58b95bdc809b9c7469bfab76e3ad0bb5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eac538a54354eb45a1c844c1b6ed784, type: 3}
 --- !u!1001 &5475759479243189143
@@ -567,6 +575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6557465741942737270, guid: 1999cc9776234584a9542c85425ffa8a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae31c496bbfb5864c8551685d07a7e0c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1999cc9776234584a9542c85425ffa8a, type: 3}
 --- !u!1001 &6980076576201594405
@@ -576,6 +588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3641638924924416199, guid: 6ca0e8c35c2ead44b8b0db33d97bc8ee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dd07baf2545e524babc19d40bdfc7ec, type: 2}
     - target: {fileID: 7587180267074181400, guid: 6ca0e8c35c2ead44b8b0db33d97bc8ee, type: 3}
       propertyPath: m_Name
       value: Blue Ball
@@ -633,6 +649,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7529099372358726824, guid: 3b6ab480298a1db42949723c47b9be64, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4afa5b362c5bd24cb23b1040d576532, type: 2}
     - target: {fileID: 7529099372358726826, guid: 3b6ab480298a1db42949723c47b9be64, type: 3}
       propertyPath: m_Name
       value: Red Ball
