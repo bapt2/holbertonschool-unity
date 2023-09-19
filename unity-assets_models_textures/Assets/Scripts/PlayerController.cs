@@ -6,8 +6,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 0;
 
     public Vector3 boxSize;
+    public Vector3 direction;
     public float maxDistance;
     public LayerMask layerMask;
+    public Camera mainCamera;
 
     Rigidbody rb;
 
@@ -20,7 +22,10 @@ public class PlayerController : MonoBehaviour
     {
         float horizontale = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        
+
+        direction = Quaternion.Euler(0, mainCamera.transform.eulerAngles.y, 0) * new Vector3(horizontale, 0, vertical);
+        direction.Normalize();
+
         rb.velocity = new Vector3(horizontale, 0, vertical) * speed * Time.fixedDeltaTime;
         if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
         {
