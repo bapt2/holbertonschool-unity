@@ -2,25 +2,20 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float timeOffSet;
     public float sensitivity;
+    public float orbitDamping;
     public Transform player;
-    public Vector3 turn;
-    public Vector3 posOffSet;
-    Vector3 velocity;
-
-    private void Start()
-    {
-        posOffSet = transform.position - player.position;
-    }
+    Vector3 localRot;
 
     void Update()
     {
-        turn.x += Input.GetAxis("Mouse X") * sensitivity;
-        turn.y += Input.GetAxis("Mouse Y") * sensitivity;
+        /*transform.position = player.position;
+        localRot.x += Input.GetAxis("Mouse X") * sensitivity;
+        localRot.y -= Input.GetAxis("Mouse Y") * sensitivity;
 
-        posOffSet = Quaternion.AngleAxis(turn.x * sensitivity, Vector3.up) * Quaternion.AngleAxis(turn.y * sensitivity, Vector3.left) * posOffSet;
-        transform.position = player.position + posOffSet;
-        transform.LookAt(player.position);
+        localRot.y = Mathf.Clamp(localRot.y, 0f, 80f);
+
+        Quaternion qt = Quaternion.Euler(localRot.y, localRot.x, 0f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, qt, Time.deltaTime * orbitDamping);*/
     }
 }

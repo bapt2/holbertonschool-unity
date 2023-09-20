@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 direction;
     public float maxDistance;
     public LayerMask layerMask;
-    public Camera mainCamera;
+    public Transform mainCamera;
 
     Rigidbody rb;
 
@@ -23,13 +23,21 @@ public class PlayerController : MonoBehaviour
         float horizontale = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        direction = Quaternion.Euler(0, mainCamera.transform.eulerAngles.y, 0) * new Vector3(horizontale, 0, vertical);
-        direction.Normalize();
+        Vector3 camForward = mainCamera.forward;
+        Vector3 camRight = mainCamera.right;
 
-        rb.velocity = new Vector3(horizontale, 0, vertical) * speed * Time.fixedDeltaTime;
-        if (Input.GetKeyDown(KeyCode.Space) && GroundCheck())
+        camForward.y = 0;
+        camRight.y = 0;
+
+        Vector3 forwardRelative = vertical * camForward;
+        Vector3 rightRelative = horizontale * camRight;
+
+        Vector3 movDir = forwardRelative + rightRelative;
+
+        rb.velocity = new Vector3(movDir.x, rb.velocity.y, movDir.z) * speed * Time.fixedDeltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Approximately(rb.velocity.y, 0))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         }
     }
 
@@ -39,15 +47,5 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawCube(transform.position - transform.up * maxDistance, boxSize);
     }
 
-    bool GroundCheck()
-    {
-        if (Physics.BoxCast(transform.position, boxSize, -transform.up, transform.rotation, maxDistance, layerMask))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+
 }
