@@ -1961,6 +1961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1635515924}
+  time: 0
 --- !u!1001 &287312647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14727,6 +14728,19 @@ CapsuleCollider:
   m_Height: 11
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2038457830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038457827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840c51c4f7ce2544c9628429d04a8b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  win: 0
 --- !u!1001 &2062340099
 PrefabInstance:
   m_ObjectHideFlags: 0
