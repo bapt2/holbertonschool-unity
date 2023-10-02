@@ -1879,10 +1879,10 @@ Transform:
   - {fileID: 1926767954}
   - {fileID: 1237818056}
   - {fileID: 1494583830}
-  - {fileID: 1817149882}
   - {fileID: 352540750}
-  - {fileID: 1675640085}
+  - {fileID: 1817149882}
   - {fileID: 2145708101}
+  - {fileID: 1675640085}
   - {fileID: 1548009019}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -15601,5 +15601,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8571720170574557090, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: abedc9f0b5f818b4caf2e1ffa7763775, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
