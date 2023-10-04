@@ -4,6 +4,7 @@ public class CameraController : MonoBehaviour
 {
     public float sensitivity;
     public float orbitDamping;
+    public bool isInverted;
     public Transform player;
     Vector3 localRot;
 
