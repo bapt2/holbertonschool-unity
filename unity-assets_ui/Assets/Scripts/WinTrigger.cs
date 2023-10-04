@@ -5,6 +5,8 @@ using UnityEngine;
 public class WinTrigger : MonoBehaviour
 {
     public bool win = false;
+    public GameObject winCanvas;
+
     private static WinTrigger instance;
 
     private void Awake()
@@ -26,7 +28,9 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            winCanvas.SetActive(true);
             win = true;
+
         }
     }
 }
