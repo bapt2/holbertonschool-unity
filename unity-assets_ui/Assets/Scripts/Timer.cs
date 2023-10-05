@@ -1,12 +1,11 @@
 using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using System;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public Text timerText;
+    public TextMeshProUGUI timerText;
     public float time;
+    public TextMeshProUGUI winText;
     
     void Update()
     {
@@ -17,8 +16,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timerText.color = Color.green;
-            timerText.fontSize = 60;
+            Win();
         }
     }
 
@@ -28,5 +26,12 @@ public class Timer : MonoBehaviour
         float second = Mathf.FloorToInt(currentTime % 60);
         float hundredth = Mathf.FloorToInt((currentTime  * 100) % 100);
         timerText.text = string.Format("{0:00}:{1:00}:{2:00}", minute, second, hundredth);
+    }
+
+    void Win()
+    {
+        winText.text = timerText.text;
+        timerText.enabled = false;
+        Time.timeScale = 0;
     }
 }

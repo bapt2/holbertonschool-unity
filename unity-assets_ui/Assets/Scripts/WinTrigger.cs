@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
@@ -30,7 +28,6 @@ public class WinTrigger : MonoBehaviour
         {
             winCanvas.SetActive(true);
             win = true;
-
         }
     }
 }

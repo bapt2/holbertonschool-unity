@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public floa sensitivity;
+    public float sensitivity;
     public float orbitDamping;
     public bool isInverted;
     public Transform player;
