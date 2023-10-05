@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_text: Invert Y-Axis
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_text: SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_text: BGM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_text: OPTIONS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
-  m_sharedMaterial: {fileID: -389250714414379472, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
+  m_sharedMaterial: {fileID: -4003823702753976396, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2712,33 +2712,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 222589525}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OptionsMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7053275378743442423, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 9040716679432111657, guid: 03f929cf946a814469b24dc3a287387e, type: 3}
       propertyPath: m_Name
       value: BackButton

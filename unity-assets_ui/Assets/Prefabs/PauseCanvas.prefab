@@ -515,7 +515,7 @@ MonoBehaviour:
   m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
-  m_sharedMaterial: {fileID: 6628164503520514216, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
+  m_sharedMaterial: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_text: PAUSED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
-  m_sharedMaterial: {fileID: -389250714414379472, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
+  m_sharedMaterial: {fileID: -4003823702753976396, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1320,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2940960186417322713, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4077927226519457281, guid: 73f741239be61e544a06cbdfbcfc4ba2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
 --- !u!224 &2818451128197573832 stripped

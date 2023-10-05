@@ -15433,10 +15433,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 996853811661280218, guid: 8c25ff91e063e884dabcd17f1e3cf6b7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2818451128197573833, guid: 8c25ff91e063e884dabcd17f1e3cf6b7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15800,10 +15796,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3409063300282768183, guid: 17bf91343f3a9da4db314ca09ae84caf, type: 3}
-      propertyPath: m_text
-      value: YOU WIN!
-      objectReference: {fileID: 0}
     - target: {fileID: 6113947361377766806, guid: 17bf91343f3a9da4db314ca09ae84caf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15811,10 +15803,6 @@ PrefabInstance:
     - target: {fileID: 6486485146316163065, guid: 17bf91343f3a9da4db314ca09ae84caf, type: 3}
       propertyPath: m_Name
       value: WinCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486485146316163065, guid: 17bf91343f3a9da4db314ca09ae84caf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7887280529819503668, guid: 17bf91343f3a9da4db314ca09ae84caf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -15845,22 +15833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1548600265015044650, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 206.172
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548600265015044650, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548600265015044650, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4514732646289468782, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
-      propertyPath: m_Name
-      value: TimerText
-      objectReference: {fileID: 0}
     - target: {fileID: 5096902273901782258, guid: e97b16911b9bbec4a963c48cf3bb0741, type: 3}
       propertyPath: m_Pivot.x
       value: 0

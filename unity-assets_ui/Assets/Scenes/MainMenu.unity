@@ -674,7 +674,7 @@ MonoBehaviour:
   m_text: LEVEL SELECT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
-  m_sharedMaterial: {fileID: -389250714414379472, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
+  m_sharedMaterial: {fileID: -4003823702753976396, guid: a78fda915c8cc9046b0c0a7244c1465e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1194,37 +1194,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1201412972}
     m_Modifications:
     - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1201412975}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LevelSelect
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940960186398607760, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2940960186398607761, guid: b36adf01835c4b34b83171214b28e7a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1407,33 +1379,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1201412975}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5932563925223540345, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5932563925223540347, guid: 97667defdfa63ce47ac441c831b2c366, type: 3}
       propertyPath: m_Name
       value: ExitButton
