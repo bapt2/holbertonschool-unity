@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject optionMenu;
     [SerializeField] GameObject losePanel;
+    [SerializeField] GameObject winPanel;
 
     private void Update()
     {
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
         {
             losePanel.SetActive(true);
         }
-    }
 
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            winPanel.SetActive(true);
+        }
+    }
 }

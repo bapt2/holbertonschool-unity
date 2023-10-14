@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject optionMenu;
+    public GameObject winMenu;
 
     static ButtonManager instance;
     private void Awake()
