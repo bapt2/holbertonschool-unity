@@ -13,6 +13,7 @@ public class GameLogic : MonoBehaviour
     public static int width = 15, height = 30;
 
     public int gameScore = 0, gameLines = 0, gameLevel = 0;
+    public int lineCount = 0;
 
     public UIManager uIManager;
 
@@ -49,12 +50,6 @@ public class GameLogic : MonoBehaviour
             winMenu.SetActive(true);
         }
 
-
-        //hold
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            
-        }
     }
 
     public void ClearLines()
@@ -64,16 +59,41 @@ public class GameLogic : MonoBehaviour
             if (IsLineComplete(y))
             {
                 DestroyLine(y);
+                lineCount += 1;
                 MoveLines(y);
-                gameScore += 50;
+                
                 gameLines += 1;
                 if (gameLines % 9 == 0)
                 {
+
                     gameLevel += 1;
-                    Debug.Log(drop);
                     drop = LevelSpeed.levels[gameLevel];
-                    Debug.Log(drop);
                     uIManager.level.text = string.Format("{0}", gameLevel);
+                }
+
+                if (IsLineComplete(y))
+                {
+                    ClearLines();
+                }
+                else
+                {
+                    if (lineCount == 1)
+                    {
+                        gameScore += 40 * (gameLevel + 1);
+                    }
+                    if (lineCount == 2)
+                    {
+                        gameScore += 100 * (gameLevel + 1);
+                    }
+                    if (lineCount == 3)
+                    {
+                        gameScore += 300 * (gameLevel + 1);
+                    }
+                    if (lineCount == 4)
+                    {
+                        gameScore += 1200 * (gameLevel + 1);
+                    }
+                    lineCount = 0;
                 }
             }
         }
@@ -87,9 +107,11 @@ public class GameLogic : MonoBehaviour
             {
                 if(grid[x, i +1] != null)
                 {
-                    grid[x, i] = grid[x, i + 1];
-                    grid[x, i + 1] = null;
-                    grid[x, i].gameObject.transform.position -= new Vector3(0, 1, 0);
+                    grid[Mathf.Abs(x), Mathf.Abs(i)] = grid[Mathf.Abs(x), Mathf.Abs(i) + 1];
+                    grid[Mathf.Abs(x), Mathf.Abs(i + 1)] = null;
+                    // sert à voir ce qui a bouger
+                    // Debug.Log(grid[Mathf.Abs(x), Mathf.Abs(i)]);
+                    grid[Mathf.Abs(x), Mathf.Abs(i)].gameObject.transform.position -= new Vector3(0, 1f, 0);
                 }
             }
         }
@@ -99,19 +121,24 @@ public class GameLogic : MonoBehaviour
     {
         for (int x = 0; x < width; x++)
         {
-            Destroy(grid[x, y].gameObject);
+            Destroy(grid[Mathf.Abs(x), Mathf.Abs(y)].gameObject);
+            // sert à voir ce qui vient d'être detruit
+            // Debug.Log(grid[Mathf.Abs(x), Mathf.Abs(y)]);
             grid[x, y] = null;
         }
     }
 
-    bool IsLineComplete(int y)
+    public bool IsLineComplete(int y)
     {
         for (int x = 0; x < width; x++)
-        {
+        {       
             if (grid[x, y] == null)
             {
                 return false;
             }
+            //sert à check la grid
+            Debug.Log(grid[Mathf.Abs(x), Mathf.Abs(y)]);
+
         }
         return true;
     }

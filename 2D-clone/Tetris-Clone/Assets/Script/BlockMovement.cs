@@ -7,13 +7,13 @@ public class BlockMovement : MonoBehaviour
 
     //public GameObject rig;
     GameLogic gameLogic;
-    public GameObject gostBlock;
 
     private void Start()
     {
         gameLogic = FindObjectOfType<GameLogic>();
         movable = true;
     }
+
 
     void RegisterBlock()
     {
@@ -43,49 +43,31 @@ public class BlockMovement : MonoBehaviour
             {
                 return false;
             }
-
             //check for block
-            if(subBlock.position.y < GameLogic.height &&
+            if (subBlock.position.y < GameLogic.height &&
                gameLogic.grid[(int)subBlock.position.x,
                (int)subBlock.position.y] != null)
             {
+                //Debug.Log(gameLogic.grid[(int)subBlock.position.x, (int)subBlock.position.y]);
                 return false;
             }
         }
         return true;
     }
 
-    void ClearEmptyBlock()
+    public void ClearEmptyBlock()
     {
         if (gameObject.transform.childCount == 0)
         {
             Destroy(gameObject);
         }
     }
-    void CheckGostBlock()
-    {
-        /*foreach (Transform subBlock in gameObject.transform)
-        {
-            //check if the subblock have a sprite
-            if ()
-            {
-                Debug.Log("test");
-                Instantiate(gostBlock, subBlock);
-                Debug.Log(gostBlock.transform);
-                Destroy(gostBlock);
-                Debug.Log(gostBlock.transform);
-            }
-
-        }*/
-    }
 
     void Update()
     {
-        ClearEmptyBlock();
         if (movable)
         {
             timer += 1 * Time.deltaTime;
-            gameLogic.ClearLines();
 
             //drop
             if (Input.GetKey(KeyCode.DownArrow) && timer > GameLogic.quickDrop)
@@ -95,84 +77,67 @@ public class BlockMovement : MonoBehaviour
 
                 if (!CheckValide())
                 {
-                    CheckGostBlock();
-                    if (!CheckValide())
-                    {
-                        movable = false;
-                        gameObject.transform.position += new Vector3(0, 1, 0);
-                        RegisterBlock();
-                        gameLogic.SpawnBlock();
+                    movable = false;
+                    //problème ici
+                    gameObject.transform.position += new Vector3(0, 1, 0);
+                    RegisterBlock();
+                    gameLogic.ClearLines();
+                    gameLogic.SpawnBlock();
 
-                    }
                 }
             }
             else if (timer > GameLogic.drop)
             {
                 gameObject.transform.position -= new Vector3(0, 1, 0);
                 timer = 0f;
-
                 if (!CheckValide())
                 {
-                    CheckGostBlock();
-
-                    if (!CheckValide())
-                    {
-                        movable = false;
-                        gameObject.transform.position += new Vector3(0, 1, 0);
-                        RegisterBlock();
-                        gameLogic.SpawnBlock();
-
-                    }
+                    movable = false;
+                    gameObject.transform.position += new Vector3(0, 1, 0);
+                    // et la
+                    RegisterBlock();
+                    gameLogic.ClearLines();
+                    gameLogic.SpawnBlock();
                 }
             }
+        }
+        //horizontal input
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && movable)
+        {
+            gameObject.transform.position -= new Vector3(1, 0, 0);
 
-            //horizontal input
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (!CheckValide())
+            {
+                gameObject.transform.position += new Vector3(1, 0, 0);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && movable)
+        {
+            gameObject.transform.position += new Vector3(1, 0, 0);
+
+            if (!CheckValide())
             {
                 gameObject.transform.position -= new Vector3(1, 0, 0);
-
-                if (!CheckValide())
-                {
-                    CheckGostBlock();
-
-                    if (!CheckValide())
-                    {
-                        gameObject.transform.position += new Vector3(1, 0, 0);
-                    }
-                }
             }
+        }
 
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+        //Rotate
+        if (Input.GetKeyDown(KeyCode.UpArrow) && movable)
+        {
+            gameObject.transform.eulerAngles -= new Vector3(0, 0, 90);
+            //gameObject.transform.Rotate(0, 0, -90);
+
+            if (!CheckValide())
             {
-                CheckGostBlock();
-                gameObject.transform.position += new Vector3(1, 0, 0);
+                //gameObject.transform.Rotate(0, 0, 90);
 
-                if (!CheckValide())
-                {
-                    CheckGostBlock();
-
-                    if (!CheckValide())
-                    {
-                        gameObject.transform.position -= new Vector3(1, 0, 0);
-                    }
-                }
+                gameObject.transform.eulerAngles += new Vector3(0, 0, 90);
             }
-
-            //Rotate
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                gameObject.transform.eulerAngles -= new Vector3(0, 0, 90);
-                
-                if (!CheckValide())
-                {
-                    CheckGostBlock();
-
-                    if (!CheckValide())
-                    {
-                        gameObject.transform.eulerAngles += new Vector3(0, 0, 90);
-                    }
-                }
-            }
+        }
+        else
+        {
+            ClearEmptyBlock();
         }
     }
 }
