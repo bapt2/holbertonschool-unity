@@ -36,6 +36,7 @@ public class ButtonManager : MonoBehaviour
     public void CloseOptionButton()
     {
         optionMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void RetryButton()

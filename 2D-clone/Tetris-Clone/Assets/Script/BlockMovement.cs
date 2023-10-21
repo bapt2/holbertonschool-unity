@@ -126,11 +126,9 @@ public class BlockMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && movable)
         {
             gameObject.transform.eulerAngles -= new Vector3(0, 0, 90);
-            //gameObject.transform.Rotate(0, 0, -90);
 
             if (!CheckValide())
             {
-                //gameObject.transform.Rotate(0, 0, 90);
 
                 gameObject.transform.eulerAngles += new Vector3(0, 0, 90);
             }

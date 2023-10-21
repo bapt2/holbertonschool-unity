@@ -1817,6 +1817,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3426878061254090638, guid: 790b1895a0af2834181489357727e5a7, type: 3}
+      propertyPath: winMenu
+      value: 
+      objectReference: {fileID: 241852518}
+    - target: {fileID: 3426878061254090638, guid: 790b1895a0af2834181489357727e5a7, type: 3}
       propertyPath: losePanel
       value: 
       objectReference: {fileID: 463405981}
