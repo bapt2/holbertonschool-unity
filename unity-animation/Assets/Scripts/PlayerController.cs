@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask layerMask;
     public Transform mainCamera;
 
+    public Animator animator;
+
     Vector3 direction;
     Rigidbody rb;
 
@@ -35,6 +37,13 @@ public class PlayerController : MonoBehaviour
         Vector3 movDir = forwardRelative + rightRelative;
 
         rb.velocity = new Vector3(movDir.x, 0, movDir.z) * speed;
+
+        float characterXVelocity = Mathf.Abs(rb.velocity.x);
+        float characterZVelocity = Mathf.Abs(rb.velocity.z);
+
+        animator.SetFloat("velocityX", characterXVelocity);
+        animator.SetFloat("velocityZ", characterZVelocity);
+
         //rb.rotation = new Quaternion(0, vertical, 0, 0);
         if (Input.GetButtonDown("Jump") && GroundCheck())
         {
