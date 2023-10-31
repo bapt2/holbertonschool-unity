@@ -11,8 +11,11 @@ public class PlayerController : MonoBehaviour
     public Transform mainCamera;
 
     bool isJumping = false;
+    bool falling = false;
 
     public Animator animator;
+
+    public Transform respawn;
 
     Vector3 direction;
     Rigidbody rb;
@@ -22,11 +25,17 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        JumpInput();
+    }
+
     void FixedUpdate()
     {
         if(GroundCheck())
         {
             isJumping = false;
+            animator.SetBool("Grounded", GroundCheck());
             animator.SetBool("Jump", isJumping);
         }
         float horizontale = Input.GetAxis("Horizontal");
@@ -51,14 +60,16 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("velocityX", characterXVelocity);
         animator.SetFloat("velocityZ", characterZVelocity);
 
-        //rb.rotation = new Quaternion(0, vertical, 0, 0);
-        if (Input.GetButtonDown("Jump") && GroundCheck())
+        if (isJumping)
         {
-            isJumping = true;
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            Vector3 jumpforce = Vector3.up * jumpForce;
-            rb.AddForce(jumpforce, ForceMode.Impulse);
-            animator.SetBool("Jump", isJumping);
+            if (GroundCheck())
+            {
+                rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+                Vector3 jumpforce = Vector3.up * jumpForce;
+                rb.AddForce(jumpforce, ForceMode.Impulse);
+            
+                animator.SetBool("Jump", isJumping);
+            }
         }
     }
 
@@ -66,6 +77,24 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawCube(transform.position - transform.up * maxDistance, boxSize);
+    }
+
+    public void Fell()
+    {
+        transform.position = respawn.position;
+        falling = true;
+        animator.SetBool("Respawn", falling);
+    }
+
+    private void JumpInput()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (GroundCheck())
+            {
+                isJumping = true;
+            }
+        }
     }
 
     bool GroundCheck()

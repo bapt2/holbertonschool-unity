@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    public Transform player;
-    public Transform spawn;
+    public PlayerController player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            player.position = spawn.position;
+            player.Fell();
         }
     }
 }
