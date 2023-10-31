@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         Vector3 movDir = forwardRelative + rightRelative;
 
         rb.velocity = new Vector3(movDir.x, 0, movDir.z) * speed;
+        //rb.rotation = new Quaternion(0, vertical, 0, 0);
         if (Input.GetButtonDown("Jump") && GroundCheck())
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
