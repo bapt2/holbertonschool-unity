@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         if(GroundCheck())
         {
             isJumping = false;
+            falling = false;
             animator.SetBool("Grounded", GroundCheck());
             animator.SetBool("Jump", isJumping);
         }
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
                 Vector3 jumpforce = Vector3.up * jumpForce;
                 rb.AddForce(jumpforce, ForceMode.Impulse);
-            
+                
                 animator.SetBool("Jump", isJumping);
             }
         }
