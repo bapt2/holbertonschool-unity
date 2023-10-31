@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         if(GroundCheck())
         {
             isJumping = false;
-            animator.SetBool("jump", isJumping);
+            animator.SetBool("Jump", isJumping);
         }
         float horizontale = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             Vector3 jumpforce = Vector3.up * jumpForce;
             rb.AddForce(jumpforce, ForceMode.Impulse);
-            animator.SetBool("jump", isJumping);
+            animator.SetBool("Jump", isJumping);
         }
     }
 
