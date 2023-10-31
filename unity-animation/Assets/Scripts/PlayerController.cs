@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask layerMask;
     public Transform mainCamera;
 
+    bool isJumping = false;
+
     public Animator animator;
 
     Vector3 direction;
@@ -22,6 +24,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(GroundCheck())
+        {
+            isJumping = false;
+            animator.SetBool("jump", isJumping);
+        }
         float horizontale = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -47,9 +54,11 @@ public class PlayerController : MonoBehaviour
         //rb.rotation = new Quaternion(0, vertical, 0, 0);
         if (Input.GetButtonDown("Jump") && GroundCheck())
         {
+            isJumping = true;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             Vector3 jumpforce = Vector3.up * jumpForce;
             rb.AddForce(jumpforce, ForceMode.Impulse);
+            animator.SetBool("jump", isJumping);
         }
     }
 
