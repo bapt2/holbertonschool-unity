@@ -17,17 +17,12 @@ public class PlayerController : MonoBehaviour
 
     public Transform respawn;
 
-    Vector3 direction;
+    //Vector3 direction;
     Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        JumpInput();
     }
 
     void FixedUpdate()
@@ -61,10 +56,11 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("velocityX", characterXVelocity);
         animator.SetFloat("velocityZ", characterZVelocity);
 
-        if (isJumping)
+        if (Input.GetButtonDown("Jump"))
         {
             if (GroundCheck())
             {
+                isJumping = true;
                 rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
                 Vector3 jumpforce = Vector3.up * jumpForce;
                 rb.AddForce(jumpforce, ForceMode.Impulse);
@@ -85,17 +81,6 @@ public class PlayerController : MonoBehaviour
         transform.position = respawn.position;
         falling = true;
         animator.SetBool("Respawn", falling);
-    }
-
-    private void JumpInput()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (GroundCheck())
-            {
-                isJumping = true;
-            }
-        }
     }
 
     bool GroundCheck()
