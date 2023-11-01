@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     public Transform respawn;
 
-    //Vector3 direction;
     Rigidbody rb;
 
     private void Start()

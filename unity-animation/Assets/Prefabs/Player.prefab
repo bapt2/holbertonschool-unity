@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 286217415}
   - component: {fileID: 286217410}
   - component: {fileID: 286217423}
+  - component: {fileID: 1167852537}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -115,9 +116,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &286217410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   mainCamera: {fileID: 0}
+  animator: {fileID: 2148752121835921735}
+  respawn: {fileID: 0}
 --- !u!114 &286217423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +156,27 @@ MonoBehaviour:
   timerText: {fileID: 0}
   time: 0
   winText: {fileID: 0}
+--- !u!95 &1167852537
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359417433552804733}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 038458a30152eff4996893b27c741733, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5529139421827636438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,8 +232,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c920f02e269bab74d9fd231ba603c8be, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 4f793c8287f4dcc4cbd30fd18ebe5723, type: 3}
+    - target: {fileID: 5866666021909216657, guid: c920f02e269bab74d9fd231ba603c8be, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 038458a30152eff4996893b27c741733, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c920f02e269bab74d9fd231ba603c8be, type: 3}
+--- !u!95 &2148752121835921735 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: c920f02e269bab74d9fd231ba603c8be, type: 3}
+  m_PrefabInstance: {fileID: 5529139421827636438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5418334473799891773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c920f02e269bab74d9fd231ba603c8be, type: 3}
