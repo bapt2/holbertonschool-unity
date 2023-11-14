@@ -1491,7 +1491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1790190360, guid: 73e0a1ed37b59f843b8367ada995d5b2, type: 3}
       propertyPath: Loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3209720409035090572, guid: 73e0a1ed37b59f843b8367ada995d5b2, type: 3}
       propertyPath: m_Name
