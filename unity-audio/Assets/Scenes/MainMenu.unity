@@ -1495,8 +1495,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1790190360, guid: 73e0a1ed37b59f843b8367ada995d5b2, type: 3}
       propertyPath: Loop
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1790190360, guid: 73e0a1ed37b59f843b8367ada995d5b2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 6274255632508329601, guid: 8d70dfa3ef64e11458ca94de50b599fc, type: 2}
     - target: {fileID: 3209720409035090572, guid: 73e0a1ed37b59f843b8367ada995d5b2, type: 3}
       propertyPath: m_Name
       value: MenuSFX
