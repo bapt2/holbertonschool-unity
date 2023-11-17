@@ -13,12 +13,20 @@ public class PlayerController : MonoBehaviour
     bool isJumping = false;
     public bool falling = false;
     public bool isGrouded = true;
+    public bool isGrass = false;
+    public bool isRock = true;
 
     public Animator animator;
 
     public GameObject model;
 
     public Transform respawn;
+
+    public AudioSource audioSource;
+    public AudioClip grassStepSound;
+    public AudioClip rockStepSound;
+
+    public Collider checkTexture;
 
     Rigidbody rb;
 
@@ -36,6 +44,32 @@ public class PlayerController : MonoBehaviour
         else
         {
             isGrouded = false;
+        }
+
+        if (Mathf.Abs(rb.velocity.z) > 0 && isGrass && isGrouded)
+        {
+            Debug.Log("grass");
+            audioSource.PlayOneShot(grassStepSound);
+        }
+        else if (Mathf.Abs(rb.velocity.z) > 0 && isRock && isGrouded)
+        {
+            Debug.Log("rock");
+            audioSource.PlayOneShot(rockStepSound);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        other = checkTexture;
+        if (other.CompareTag("Rock"))
+        {
+            isRock = true;
+            isGrass = false;
+        }
+        if (other.CompareTag("Grass"))
+        {
+            isRock = false;
+            isGrass = true;
         }
     }
 
